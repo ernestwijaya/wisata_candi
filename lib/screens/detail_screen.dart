@@ -53,84 +53,83 @@ class DetailScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(height: 16.0),
+                  // info atas
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        candi.name,
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.favorite_border),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 16.0),
+                  // info tengah
+                  Row(
+                    children: [
+                      Icon(Icons.place, color: Colors.red),
+                      SizedBox(width: 8.0),
+                      SizedBox(
+                        width: 70.0,
+                        child: Text(
+                          'Lokasi',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Text(' : ${candi.location} '),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Icon(Icons.calendar_month, color: Colors.blue),
+                      SizedBox(width: 8.0),
+                      SizedBox(
+                        width: 70.0,
+                        child: Text(
+                          'Dibangun',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Text(' : ${candi.built} '),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Icon(Icons.house, color: Colors.green),
+                      SizedBox(width: 8.0),
+                      SizedBox(
+                        width: 70.0,
+                        child: Text(
+                          'Tipe',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Text(' : ${candi.type} '),
+                    ],
+                  ),
+                  SizedBox(height: 16.0),
+                  Divider(color: Colors.deepPurple.shade100),
+                  SizedBox(height: 16.0),
+                  Text(
+                    'Deskripsi',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 16.0),
+                  Text(candi.description),
                   Padding(
                     padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      children: [
-                        SizedBox(height: 16.0),
-                        // info atas
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              candi.name,
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            IconButton(
-                              onPressed: () {},
-                              icon: Icon(Icons.favorite_border),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 16.0),
-                        // info tengah
-                        Row(
-                          children: [
-                            Icon(Icons.place, color: Colors.red),
-                            SizedBox(width: 8.0),
-                            SizedBox(
-                              width: 70.0,
-                              child: Text(
-                                'Lokasi',
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Text(' : ${candi.location} '),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Icon(Icons.calendar_month, color: Colors.blue),
-                            SizedBox(width: 8.0),
-                            SizedBox(
-                              width: 70.0,
-                              child: Text(
-                                'Dibangun',
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Text(' : ${candi.built} '),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Icon(Icons.house, color: Colors.green),
-                            SizedBox(width: 8.0),
-                            SizedBox(
-                              width: 70.0,
-                              child: Text(
-                                'Tipe',
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Text(' : ${candi.type} '),
-                          ],
-                        ),
-                        SizedBox(height: 16.0),
-                        Divider(color: Colors.deepPurple.shade100),
-                        SizedBox(height: 16.0),
-                        Text(
-                          'Deskripsi',
-                          style: TextStyle(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(height: 16.0),
-                        Text(candi.description),
+                    child: Column(children: [
                       ],
                     ),
                   ),
