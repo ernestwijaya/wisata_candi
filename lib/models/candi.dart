@@ -7,6 +7,8 @@ class Candi {
   final String imageAsset;
   final List<String> imageUrls;
   bool isFavorite;
+  final String visitingHours;
+  final int sumFavorite;
 
   Candi({
     required this.name,
@@ -17,7 +19,7 @@ class Candi {
     required this.imageAsset,
     required this.imageUrls,
     this.isFavorite = false,
+    required this.visitingHours,
+    required this.sumFavorite,
   });
-
 }
-
